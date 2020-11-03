@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Github Gists</title>
   </head>
   <body>
     <h1>Public Gihub Gists</h1>
     <h2>Search by User</h2>
-    <input type="text" placeholder="Example: Getify" />
-    <button>Search</button>
-    <div class="results"></div>
+    <input type="text" placeholder="Example: Getify" class="search-input" />
+    <button class="search-button">Search</button>
+    <div class="results">
+      <h3 class="user-searched"></h3>
+      <ul class="results-list"></ul>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
