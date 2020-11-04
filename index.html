@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <link>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github Gists</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h1>Public Gihub Gists</h1>
-    <h2>Search by User</h2>
-    <input type="text" placeholder="Example: Getify" class="search-input" />
-    <button class="search-button">Search</button>
+    <div class="search-div">
+      <label for="search-gists-by-user" class="search-label">Search by User</label>
+      <input type="text" placeholder="Example: Getify" class="search-input" id="search-gists-by-user" />
+      <button class="search-button">Search</button>
+    </div>
     <div class="results">
       <h3 class="user-searched"></h3>
       <ul class="results-list"></ul>
