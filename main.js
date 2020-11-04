@@ -14,11 +14,12 @@ const getGists = () => {
     resultsList.innerHTML = `<p style="color: red">Ya gotta search someone, ya dingus!</p>`;
   } else {
     const searchedUser = search.value;
+    search.value = "";
     userSearched.innerHTML = `${searchedUser}'s Gists:`;
     fetch(`${URL}${searchedUser}/gists`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data[0]);
+        console.log(data[1]);
         if (data.length === 0) {
           // return "This user has no gists."
           console.log("This user has no gists");
@@ -26,9 +27,11 @@ const getGists = () => {
         } else {
           data.map((gist) => {
             return (resultsList.innerHTML += `
-              <li>
-                <p>${gist.description}</p>
-                <p>Comments: ${gist.comments}</p>
+              <li class="result-li">
+                <a href="${gist.html_url}">
+                  <p class="result-description">Description: ${gist.description}</p>
+                  <p class="result-comment">Comments: ${gist.comments}</p>
+                </a>
               </li>
             `);
           });
