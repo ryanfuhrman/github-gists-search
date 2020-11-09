@@ -28,7 +28,7 @@ const getGists = () => {
           data.map((gist) => {
             return (resultsList.innerHTML += `
               <li class="result-li">
-                <a href="${gist.html_url}">
+                <a href="${gist.html_url}" class="result-link">
                   <p class="result-description">Description: ${gist.description}</p>
                   <p class="result-comment">Comments: ${gist.comments}</p>
                 </a>
@@ -41,3 +41,8 @@ const getGists = () => {
 };
 
 searchButton.addEventListener("click", getGists);
+search.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    getGists();
+  }
+});
