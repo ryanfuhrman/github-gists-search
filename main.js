@@ -29,8 +29,8 @@ const getGists = () => {
             return (resultsList.innerHTML += `
               <li class="result-li">
                 <a href="${gist.html_url}" class="result-link">
-                  <p class="result-description">Description: ${gist.description}</p>
-                  <p class="result-comment">Comments: ${gist.comments}</p>
+                  <p class="result-description"><span class="result-category-name">Description:</span>  ${gist.description}</p>
+                  <p class="result-comment"><span class="result-category-name">Comments:</span> ${gist.comments}</p>
                 </a>
               </li>
             `);
